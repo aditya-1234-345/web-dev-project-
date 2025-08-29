@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header>
+        <!-- Logo Section -->
+        <div class="logo">
+            <i class="fas fa-globe-americas"></i>
+            <h1>TravelEase</h1>
+        </div>
+        
+        <!-- Navigation Bar with working links -->
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#home" class="nav-item">Home</a>
+                <a href="#about" class="nav-item">About Us</a>
+                <a href="#services" class="nav-item">Services</a>
+                <a href="#contact" class="nav-item">Contact Us</a>
+                <a href="#feedback" class="nav-item">Feedback</a>
+            </div>
+        </nav>
+
+        <!-- Authentication buttons only -->
+        <div class="auth-buttons">
+            <button id="signInBtn">Sign In</button>
+            <button id="logInBtn">Log In</button>
+        </div>
+    </header>
+
+    <!-- Login Required Mini Modal -->
+    <div id="loginRequiredModal" class="mini-modal">
+        <div class="mini-modal-content">
+            <span class="mini-close">&times;</span>
+            <div class="mini-modal-body">
+                <i class="fas fa-lock"></i>
+                <h3>Login Required</h3>
+                <p>Please sign in or log in to book tickets</p>
+                <div class="mini-buttons">
+                    <button id="miniSignIn" class="mini-btn signin">Sign In</button>
+                    <button id="miniLogIn" class="mini-btn login">Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Home/Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to <span class="brand">TravelEase</span></h1>
+                <p class="subtitle"><b>"No matter the path — road, rail, or sky — your journey begins with ease. Travel smart. TravelEase."</b></p>
+                <div class="hero-buttons">
+                    <button class="btn primary-btn book-now-btn">Book Now</button>
+                    <a href="#services" class="btn secondary-btn explore-btn">Explore Services</a>
+                </div>
+                <div class="icon-row">
+                    <i class="fas fa-train icon"></i>
+                    <i class="fas fa-bus icon"></i>
+                    <i class="fas fa-plane icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <h2>Travel Gallery</h2>
+                <p>Explore the beauty of India through our curated gallery showcasing stunning destinations.</p>
+                <div class="gallery-grid">
+                    <!-- Transport Services Gallery Items -->
+                    <div class="gallery-item">
+                        <div class="image-frame">
+                            <img src="plane.jpeg.jpg" alt="Aeroplane Services">
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Aeroplane Services</h3>
+                            <p>✈ Fly high with TravelEase</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-frame">
+                            <img src="train.jpg" alt="Train Services">
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Train Services</h3>
+                            <p>🚂 Travel with peace with TravelEase</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-frame">
+                            <img src="bus.jpg" alt="Bus Services">
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Bus Services</h3>
+                            <p>🚌 Ride smart with TravelEase</p>
+                        </div>
+                    </div>
+
+                    <!-- Popular Destinations -->
+                    <div class="gallery-item">
+                        <div class="image-frame">
+                            <img src="Kashmir.jpeg.jpg" alt="Kashmir">
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Kashmir</h3>
+                            <p>💫 Heaven on Earth</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-frame">
+                            <img src="download (5).jpeg.jpg" alt="London">
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>London</h3>
+                            <p>❤ The City of Dreams</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-frame">
+                            <img src="A Symphony of Love and Sea ; Resort De Coração.jpeg.jpg" alt="Goa">
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Goa</h3>
+                            <p>🏖 Where Sun Meets Sea</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <div class="image-frame">
+                            <img src="Dubai.jpeg.jpg" alt="Dubai">
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Dubai</h3>
+                            <p>🌟 City of Gold</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-frame">
+                            <img src="Kerala.jpeg.jpg" alt="Kerela">
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Kerela</h3>
+                            <p>🌴Kerala – Where Nature Meets Serenity</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-frame">
+                            <img src="Taj Mahal Palace, India.jpeg.jpg" alt="Agra">
+                        </div>
+                        <div class="gallery-overlay">
+                            <h3>Agra</h3>
+                            <p>🕌 Taj Mahal – The Monument of Eternal Love</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>TravelEase is your one-stop destination for booking tickets for buses, trains, and aeroplanes – all in one place. Our mission is to simplify travel planning by offering a quick, reliable, and secure platform for all your transportation needs.</p>
+                <p>With TravelEase, you get:</p>
+                <div class="benefits">
+                    <p class="benefit-item"><i class="fas fa-check-circle"></i> A seamless and intuitive booking experience</p>
+                    <p class="benefit-item"><i class="fas fa-check-circle"></i> Access to the best prices across all transport modes</p>
+                    <p class="benefit-item"><i class="fas fa-check-circle"></i> 24/7 customer support to assist you anytime, anywhere</p>
+                </div>
+                <p>Whether you're commuting for work, planning a vacation, or making a last-minute trip, TravelEase ensures your journey begins with ease and convenience.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-ticket-alt"></i>
+                        <h3>Easy Booking</h3>
+                        <p>Book tickets in just a few simple steps</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>Best Prices</h3>
+                        <p>Get the best deals on all transport tickets</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-headset"></i>
+                        <h3>24/7 Support</h3>
+                        <p>Our customer support is always available</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services">
+                    <div class="service">
+                        <i class="fas fa-bus"></i>
+                        <h3>Bus Tickets</h3>
+                        <p>Book bus tickets for local and interstate travel with comfortable seating and affordable prices.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> AC & Non-AC Options</li>
+                            <li><i class="fas fa-check"></i> Online Seat Selection</li>
+                            <li><i class="fas fa-check"></i> Live Tracking</li>
+                            <li><i class="fas fa-check"></i> Instant Confirmation</li>
+                        </ul>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-train"></i>
+                        <h3>Train Tickets</h3>
+                        <p>Reserve train tickets for comfortable journeys across the country with various class options.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> All Class Bookings</li>
+                            <li><i class="fas fa-check"></i> PNR Status Check</li>
+                            <li><i class="fas fa-check"></i> Train Running Status</li>
+                            <li><i class="fas fa-check"></i> Cancellation Support</li>
+                        </ul>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-plane"></i>
+                        <h3>Flight Tickets</h3>
+                        <p>Book domestic and international flights with competitive prices and flexible booking options.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Domestic & International</li>
+                            <li><i class="fas fa-check"></i> Multiple Airlines</li>
+                            <li><i class="fas fa-check"></i> Web Check-in</li>
+                            <li><i class="fas fa-check"></i> Baggage Information</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+
+                <div class="contact-info">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName">Name</label>
+                                <input type="text" id="contactName" name="contactName" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" id="contactEmail" name="contactEmail" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Message</label>
+                                <textarea id="contactMessage" name="contactMessage" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Mumbai (Head Office)
+TravelEase Pvt. Ltd.
+3rd Floor, Sunrise Tower,
+Near Andheri Metro Station,
+Andheri East, Mumbai - 400069
+Maharashtra, India</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-mobile"></i>
+                            <p>Call Us: +91 98765 43210, +91 91234 56789</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>TravelEase@gmail.com</p>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://chat.whatsapp.com/LNIXaz3JSW68QUYJz7qVky?mode=ac_t" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://instagram.com/travel__ease" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yesaditya4@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback" class="feedback-section">
+            <div class="container">
+                <h2>Feedback</h2>
+                <p>We value your feedback! Please share your experience with us.</p>
+                
+                <div class="feedback-wrapper">
+                    <form id="feedbackForm">
+                        <div class="form-group">
+                            <label for="feedbackName">Name *</label>
+                            <input type="text" id="feedbackName" name="name" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedbackEmail">Email *</label>
+                            <input type="email" id="feedbackEmail" name="email" placeholder="Your Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedback_type">Feedback Type *</label>
+                            <select id="feedback_type" name="feedback_type" required>
+                                <option value="">Select Feedback Type</option>
+                                <option value="suggestion">Suggestion</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="appreciation">Appreciation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedback_text">Your Feedback *</label>
+                            <textarea id="feedback_text" name="feedback_text" placeholder="Please share your feedback..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content auth-modal">
+            <span class="close">&times;</span>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="signin">Sign In</button>
+                <button class="auth-tab" data-tab="login">Log In</button>
+            </div>
+            
+            <div id="signinTab" class="auth-form active">
+                <div class="auth-form-container">
+                    <h3>Create an Account</h3>
+                    <form id="signinForm" class="scrollable-form">
+                        <div class="form-group">
+                            <label for="signupName">Full Name</label>
+                            <input type="text" id="signupName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email</label>
+                            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPhone">Phone Number</label>
+                            <input type="tel" id="signupPhone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" placeholder="Create a password" required>
+                        </div>
+                        
+                        
+                        
+                        <button type="submit" class="auth-submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div id="loginTab" class="auth-form">
+                <div class="auth-form-container">
+                    <h3>Welcome Back</h3>
+                    <form id="loginForm" class="scrollable-form">
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                        </div>
+                        
+                        <button type="submit" class="auth-submit">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>TravelEase</h2>
+                <p>Your trusted partner for transport bookings</p>
+                <p>~ ✈ For a modern & reliable tone:
+TravelEase
+Fly high, land happy.<br><br>
+
+~ 🚆 For a confident, trust-building tone:
+TravelEase
+Let the tracks lead your journey.<br><br>
+
+~ 🚌 With a friendly, helpful vibe:
+TravelEase
+Every stop brings a new story.<br><br></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TravelEase. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    
+
+    <script src="indexscript.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("4GB_fi8gDN3ylx76t");
+  });
+</script>
+
+
+</body>
+</html>

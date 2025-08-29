@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets - TravelEase</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-globe-americas"></i>
+            <h1>TravelEase</h1>
+        </div>
+        
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="index.html" class="nav-item active">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="#booking" class="nav-item">
+                    <i class="fas fa-ticket-alt"></i> Book Tickets
+                </a>
+                <a href="#routes-map" class="nav-item">
+                    <i class="fas fa-map"></i> Routes
+                </a>
+            </div>
+        </nav>
+
+       
+<a href="#" id="logoutBtn" class="logout-btn">
+    <i class="fas fa-sign-out-alt"></i> Logout
+</a>
+
+
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <div class="container">
+                <h1>Welcome to <span class="brand-name">TravelEase</span></h1>
+                <p>"No matter the path — road, rail, or sky — your journey begins with ease. Travel smart. TravelEase."</p>
+            </div>
+        </section>
+
+        <section id="routes-map" class="map-section">
+            <div class="container">
+                <div class="map-header">
+                    <h2>Explore Our Network</h2>
+                    <p>Discover routes across India with our extensive transportation network</p>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-overlay-text">
+                        <h3>Connect Every Corner of India</h3>
+                        <p>From bustling metros to scenic hill stations, we connect you to 500+ destinations</p>
+                        <div class="map-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>500+ Cities</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-route"></i>
+                                <span>1000+ Routes</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-clock"></i>
+                                <span>24/7 Service</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="india-map">
+                        <img src="indianmapop.jpg" alt="India Map" class="map-image" height="500" width="400">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="booking-section">
+            <div class="container">
+                <div class="booking-header">
+                    <h2>Choose Your Journey</h2>
+                    <p>Select your preferred mode of transport and book instantly</p>
+                </div>
+                
+                <div class="transport-tabs">
+                    <button class="transport-tab active" data-transport="bus">
+                        <i class="fas fa-bus"></i>
+                        <span>Bus</span>
+                    </button>
+                    <button class="transport-tab" data-transport="train">
+                        <i class="fas fa-train"></i>
+                        <span>Train</span>
+                    </button>
+                    <button class="transport-tab" data-transport="airplane">
+                        <i class="fas fa-plane"></i>
+                        <span>Airplane</span>
+                    </button>
+                </div>
+
+                <div id="busForm" class="booking-form active">
+                    <div class="form-header">
+                        <h2><i class="fas fa-bus"></i> Bus Booking</h2>
+                        <p>Book your comfortable bus journey</p>
+                    </div>
+                    <form class="ticket-form" data-type="bus">
+                        <div class="form-group">
+                            <label for="busEmail">
+                                <i class="fas fa-envelope"></i> Email Address
+                            </label>
+                            <input type="email" id="busEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="busFrom">
+                                    <i class="fas fa-map-marker-alt"></i> From
+                                </label>
+                                <input type="text" id="busFrom" placeholder="Departure city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="busTo">
+                                    <i class="fas fa-map-marker-alt"></i> To
+                                </label>
+                                <input type="text" id="busTo" placeholder="Destination city" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="busDate">
+                                    <i class="fas fa-calendar-alt"></i> Journey Date
+                                </label>
+                                <input type="date" id="busDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="busPassengers">
+                                    <i class="fas fa-users"></i> Passengers
+                                </label>
+                                <input type="number" id="busPassengers" min="1" max="10"  required placeholder="Number of passengers 1-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="busTiming">
+                                <i class="fas fa-clock"></i> Preferred Timing
+                            </label>
+                            <select id="busTiming" required>
+                                <option value="">Select timing</option>
+                                <option value="Morning - 06:00 AM">Morning - 06:00 AM</option>
+                                <option value="Morning - 06:15 AM">Morning - 06:15 AM</option>
+                                <option value="Afternoon - 01:00 PM">Afternoon - 01:00 PM</option>
+                                <option value="Evening - 02:00 PM">Evening - 02:00 PM</option>
+                                <option value="Night - 10:00 PM">Night - 10:00 PM</option>
+                                <option value="Night - 11:30 PM">Night - 11:30 PM</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="pay-btn">
+                            <i class="fas fa-credit-card"></i> Proceed to Payment
+                        </button>
+                    </form>
+                </div>
+
+                <div id="trainForm" class="booking-form">
+                    <div class="form-header">
+                        <h2><i class="fas fa-train"></i> Train Booking</h2>
+                        <p>Experience comfortable rail travel</p>
+                    </div>
+                    <form class="ticket-form" data-type="train">
+                        <div class="form-group">
+                            <label for="trainEmail">
+                                <i class="fas fa-envelope"></i> Email Address
+                            </label>
+                            <input type="email" id="trainEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="trainFrom">
+                                    <i class="fas fa-train"></i> From Station
+                                </label>
+                                <input type="text" id="trainFrom" placeholder="Departure station" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="trainTo">
+                                    <i class="fas fa-train"></i> To Station
+                                </label>
+                                <input type="text" id="trainTo" placeholder="Destination station" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="trainDate">
+                                    <i class="fas fa-calendar-alt"></i> Journey Date
+                                </label>
+                                <input type="date" id="trainDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="trainPassengers">
+                                    <i class="fas fa-users"></i> Passengers
+                                </label>
+                                <input type="number" id="trainPassengers" min="1" max="10"  required placeholder="Number of passengers 1-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="trainTiming">
+                                <i class="fas fa-clock"></i> Preferred Timing
+                            </label>
+                            <select id="trainTiming" required>
+                                <option value="">Select timing</option>
+                                <option value="Morning - 07:00 AM">Morning - 07:00 AM</option>
+                                <option value="Morning - 07:15 AM">Morning - 07:15 AM</option>
+                                <option value="Afternoon - 01:30 PM">Afternoon - 01:30 PM</option>
+                                <option value="Evening - 03:40 PM">Evening - 03:40 PM</option>
+                                <option value="Night - 08:45 PM">Night - 08:45 PM</option>
+                                <option value="Night - 09:30 PM">Night - 09:30 PM</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="pay-btn">
+                            <i class="fas fa-credit-card"></i> Proceed to Payment
+                        </button>
+                    </form>
+                </div>
+
+                <div id="airplaneForm" class="booking-form">
+                    <div class="form-header">
+                        <h2><i class="fas fa-plane"></i> Flight Booking</h2>
+                        <p>Fly to your destination with comfort</p>
+                    </div>
+                    <form class="ticket-form" data-type="airplane">
+                        <div class="form-group">
+                            <label for="airplaneEmail">
+                                <i class="fas fa-envelope"></i> Email Address
+                            </label>
+                            <input type="email" id="airplaneEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="airplaneFrom">
+                                    <i class="fas fa-plane-departure"></i> From Airport
+                                </label>
+                                <input type="text" id="airplaneFrom" placeholder="Departure city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="airplaneTo">
+                                    <i class="fas fa-plane-arrival"></i> To Airport
+                                </label>
+                                <input type="text" id="airplaneTo" placeholder="Destination city" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="airplaneDate">
+                                    <i class="fas fa-calendar-alt"></i> Journey Date
+                                </label>
+                                <input type="date" id="airplaneDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="airplanePassengers">
+                                    <i class="fas fa-users"></i> Passengers
+                                </label>
+                                <input type="number" id="airplanePassengers" min="1" max="10"  required placeholder="Number of passengers 1-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="airplaneTiming">
+                                <i class="fas fa-clock"></i> Preferred Timing
+                            </label>
+                            <select id="airplaneTiming" required>
+                                <option value="">Select timing</option>
+                                <option value="Morning - 08:30 AM">Morning - 08:30 AM</option>
+                                <option value="Morning - 08:45 AM">Morning - 08:45 AM</option>
+                                <option value="Morning - 09:00 AM">Morning - 09:00 AM</option>
+                                <option value="Afternoon - 02:15 PM">Afternoon - 02:15 PM</option>
+                                <option value="Afternoon - 03:25 PM">Afternoon - 03:25 PM</option>
+                                <option value="Evening - 04:00 PM">Evening - 04:00 PM</option>
+                                <option value="Evening - 05:00 PM">Evening - 05:00 PM</option>
+                                <option value="Night - 09:00 PM">Night - 09:00 PM</option>
+                                <option value="Night - 10:15 PM">Night - 10:15 PM</option>
+                                <option value="Night - 10:30 PM">Night - 10:30 PM</option>
+                                <option value="Night - 11:15 PM">Night - 11:15 PM</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="pay-btn">
+                            <i class="fas fa-credit-card"></i> Proceed to Payment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Ticket Booked Successfully!</h2>
+            <p>Your booking has been confirmed. Check your email for details.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TravelEase. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="booking-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    
+    <script>
+        (function() {
+            emailjs.init("ZDoPE9JsW1zJErfEs");
+        })();
+    </script>
+</body>
+</html>
